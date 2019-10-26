@@ -1,0 +1,101 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.img {
+  flex-grow: 1;
+  min-height: 1px;
+  background: url("https://cdn.pixabay.com/photo/2013/02/20/11/30/autumn-83761_1280.jpg");
+  background-size: cover;
+}
+
+.calendar {
+  flex-shrink: 0;
+  padding: 30px 20px 50px;
+  background-color: #262125;
+}
+
+.top {
+  font-size: 32px;
+  letter-spacing: 2px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+}
+
+.days {
+  font-size: 20px;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  background-color: #262125;
+  padding: 30px 0 20px;
+  border-bottom: 3px solid white;
+  flex-wrap: wrap;
+}
+
+.day {
+  text-align: center;
+  font-weight: 500;
+  border-radius: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.quote {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 10px 0 0;
+}
+
+.weekday {
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.today {
+  border: 1px solid #0AAEFF;
+}
+
+.sunday {
+  color: #0AAEFF;
+}
+
+.out {
+  display: none;
+}
+
+.month {
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.year {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1280px) {
+  .calendar {
+    flex-shrink: 0;
+    padding: 10px;
+  }
+  .days {
+    justify-content: normal;
+    padding-top: 10px;
+  }
+  .day {
+    width: (100% / 7);
+  }
+
+  .weekday {
+    margin-bottom: 5px;
+  }
+
+  .out {
+    display: block;
+    opacity: 0.4;
+  }
+}
